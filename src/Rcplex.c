@@ -1,7 +1,7 @@
 // The actual solving procedure is called using the function Rcplex 
 #include "Rcplex.h"
 
-SEXP Rcplex(SEXP numcols_p,
+SEXP _Rcplex(SEXP numcols_p,
 	    SEXP numrows_p,
 	    SEXP objsen_p,
 	    SEXP cvec,
@@ -331,6 +331,7 @@ SEXP Rcplex(SEXP numcols_p,
     Rprintf("Status: %d", status);
     my_error(("Failed to set parameters to default.\n"));
   }
+
   return(res);
 }
 
